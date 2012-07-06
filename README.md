@@ -2,6 +2,10 @@
 
 Python 3.2 Creole wiki markup parser.
 
+- Processes wiki markup text in a single-pass.
+- Does not use regular expression substitution.
+- Does not require any other modules.
+
 ## Introduction
 
 This module parses Cerole wiki version 1.0 markup text into HTML5 or XHTML.
@@ -38,16 +42,16 @@ as shown in the examples.
 Instantiating the CreoleParser class:
 
 ```python    
-    from creole_parser import CreoleParser
+from creole_parser import CreoleParser
 
-    parser = CreoleParser()
+parser = CreoleParser()
 
-    file = open('markup.creole')
-    result = parser.parse(file)
-    file.close()
+file = open('markup.creole')
+result = parser.parse(file)
+file.close()
 
-    print(result.heading)   # can be None if no heading was found
-    print(result)           # the result is just a normal string
+print(result.heading)   # can be None if no heading was found
+print(result)           # the result is just a normal string
 ```
 
 ### Example 2
@@ -55,14 +59,14 @@ Instantiating the CreoleParser class:
 Calling the module-level parse() function:
 
 ```python
-    import creole_parser
+import creole_parser
 
-    file = open('markup.creole')
-    result = creole_parser.parse(file)
-    file.close()
+file = open('markup.creole')
+result = creole_parser.parse(file)
+file.close()
 
-    print(result.heading)   # can be None if no heading was found
-    print(result)           # the result is just a normal string
+print(result.heading)   # can be None if no heading was found
+print(result)           # the result is just a normal string
 ```
 
 ## Differences
