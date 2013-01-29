@@ -16,11 +16,7 @@ This module requires Python 3 and has only been tested with version 3.2.
 
 ## Details
 
-It provides the CreoleParser class that parses markup from a string or any
-object capable of producing lines of text from an iterator (files, etc.).
-
-It also provides the parse() function that instantiates the parser for
-applications where a simple function call is all that is required.
+It provides the `CreoleParser` class that parses markup from a string or any object capable of producing lines of text from an iterator (files, etc.). It also provides the `parse()` function that instantiates the parser for applications where a simple function call is all that is required.
 
 By default, the output is HTML5 text.  This means that tags such as `<br>`,
 `<img>`, and `<hr>` are not output as self-closing tags.  The resulting HTML5
