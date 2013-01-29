@@ -26,7 +26,7 @@ By default, the output is HTML5 text.  This means that tags such as `<br>`,
 `<img>`, and `<hr>` are not output as self-closing tags.  The resulting HTML5
 can be included in a document that having the text/html content type, but
 not as an XHTML (or any XML) document.  If XHTML is required, the parser
-can be instantiated with the html5 parameter set to False.
+can be instantiated with the `html5` parameter set to False.
 
 Reference: <http://www.wikicreole.org/wiki/Creole1.0>
 
@@ -81,15 +81,15 @@ Differences between this implementation and the Creole 1.0 specification:
         ; definition list term
         : definition list description
 
-2. Consecutive table columns (||, |=|=, or any combination) are
-   merged into a single <th> or <td> tag with the colspan attribute.
+2. Consecutive table columns (`||`, `|=|=`, or any combination) are
+   merged into a single `<th>` or `<td>` tag with the colspan attribute.
    The value of the last column indicator determines the type of tag
-   so '||=' and '|=|=' both generate a `<th colspan="2">` tag.
+   so `||=` and `|=|=` both generate a `<th colspan="2">` tag.
 
 3. Headings can have an id attribute.  This is useful for fragment
    links (e.g., #target) in a table of contents.  The id attribute
    is taken from the text following the last closing equal sign.
-   For example, '== System Overview == overview' generates the
+   For example, `== System Overview == overview` generates the
    following HTML: `<h2 id="overview">System Overview</h2>`.
 
 4. Free-standing link URI schemes include 'http', 'https', and 'ftp'.
